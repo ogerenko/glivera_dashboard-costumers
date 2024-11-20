@@ -1,0 +1,2 @@
+var o=document.querySelector(".dashboard__button-hide-show"),e=document.querySelector(".dashboard"),t=document.querySelector(".dashboard__button-hide-show-bg"),d=document.querySelector(".body__module"),s=document.querySelector(".body");o.addEventListener("click",function(){e.classList.toggle("dashboard--visible"),t.classList.toggle("dashboard__button-hide-show-bg--active"),d.classList.toggle("body__module--active"),window.scrollTo({top:0,behavior:"smooth"}),s.classList.toggle("no-scroll")});
+//# sourceMappingURL=index.d63b7423.js.map
