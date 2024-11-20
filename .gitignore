@@ -4,6 +4,7 @@
 
 # Node
 node_modules
+.github/workflows
 
 # MacOS
 .DS_Store
