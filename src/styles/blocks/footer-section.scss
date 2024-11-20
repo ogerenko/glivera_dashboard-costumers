@@ -1,0 +1,19 @@
+.footer-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @include on-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__info {
+    color: $text-color_thirdly;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+  }
+}

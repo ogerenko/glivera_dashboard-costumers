@@ -1,0 +1,68 @@
+.table {
+  display: none;
+
+  @include on-tablet {
+    display: table;
+
+    margin-block: 30px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__head {
+    color: $text-color_thirdly;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    text-wrap: nowrap;
+    letter-spacing: -0.01em;
+    position: relative;
+  }
+
+  &__row:not(.table__row--header) {
+    border-bottom: 1px solid $border-color;
+
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+  }
+
+  &__header {
+    @include on-tablet {
+      padding-bottom: 14px;
+      padding-top: 10px;
+      padding-inline: 0.5rem;
+    }
+
+    @include on-desktop {
+      padding: 0;
+      padding-right: 1rem;
+      padding-bottom: 14px;
+      padding-top: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -10%;
+      right: -10%;
+      height: 1px;
+      background-color: $border-color;
+      z-index: 1;
+    }
+  }
+
+  &__cell {
+    @include on-tablet {
+      padding-inline: 0.5rem;
+      padding-block: 1rem;
+      text-wrap: nowrap;
+    }
+
+    @include on-desktop {
+      padding: 0;
+      padding-block: 20px;
+    }
+  }
+}

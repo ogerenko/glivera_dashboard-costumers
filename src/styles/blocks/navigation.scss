@@ -1,0 +1,123 @@
+.navigation {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__link {
+    padding: 11px;
+    padding-left: 8px;
+    border-radius: 8px;
+
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: $text-color_nav-list;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    transition-duration: $effect-duration;
+
+    &:not(.navigation__link--dashboard)::after {
+      content: "";
+      position: relative;
+      margin-left: auto;
+      height: 16px;
+      width: 16px;
+      background-image: url(../images/icons/arrow-right_icon.svg);
+    }
+
+    &:hover {
+      background-color: $bg-hover-color;
+      color: $text-color_white;
+
+      .navigation__icon {
+        &--dashboard {
+          background-image: url(../images/icons/dashboard_icon-nav--active.svg);
+        }
+        &--product {
+          background-image: url(../images/icons/product_icon-nav--active.svg);
+        }
+        &--customers {
+          background-image: url(../images/icons/customers_icon-nav--active.svg);
+        }
+        &--income {
+          background-image: url(../images/icons/income_icon-nav--active.svg);
+        }
+        &--promote {
+          background-image: url(../images/icons/promote_icon-nav--active.svg);
+        }
+        &--help {
+          background-image: url(../images/icons/help_icon-nav--active.svg);
+        }
+      }
+
+      &::after {
+        content: "";
+        background-image: url(../images/icons/arrow-right_icon--active.svg);
+      }
+    }
+
+    &--active {
+      background-color: $bg-active-color;
+      color: $text-color_white;
+
+      .navigation__icon {
+        &--dashboard {
+          background-image: url(../images/icons/dashboard_icon-nav--active.svg);
+        }
+        &--product {
+          background-image: url(../images/icons/product_icon-nav--active.svg);
+        }
+        &--customers {
+          background-image: url(../images/icons/customers_icon-nav--active.svg);
+        }
+        &--income {
+          background-image: url(../images/icons/income_icon-nav--active.svg);
+        }
+        &--promote {
+          background-image: url(../images/icons/promote_icon-nav--active.svg);
+        }
+        &--help {
+          background-image: url(../images/icons/help_icon-nav--active.svg);
+        }
+      }
+
+      &::after {
+        content: "";
+        background-image: url(../images/icons/arrow-right_icon--active.svg) !important;
+      }
+    }
+  }
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+
+    &--dashboard {
+      background-image: url(../images/icons/dashboard_icon-nav.svg);
+    }
+    &--product {
+      background-image: url(../images/icons/product_icon-nav.svg);
+    }
+    &--customers {
+      background-image: url(../images/icons/customers_icon-nav.svg);
+    }
+    &--income {
+      background-image: url(../images/icons/income_icon-nav.svg);
+    }
+    &--promote {
+      background-image: url(../images/icons/promote_icon-nav.svg);
+    }
+    &--help {
+      background-image: url(../images/icons/help_icon-nav.svg);
+    }
+  }
+}

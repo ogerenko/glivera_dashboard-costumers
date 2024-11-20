@@ -1,0 +1,19 @@
+.status {
+  width: 80px;
+  padding-block: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+
+  &--active {
+    background-color: $bg-status-active;
+    border: 1px solid $border-color_green;
+    color: $text-color_green;
+  }
+
+  &--inactive {
+    background-color: $bg-status-inactive;
+    border: 1px solid $border-color_red;
+    color: $text-color_red;
+  }
+}

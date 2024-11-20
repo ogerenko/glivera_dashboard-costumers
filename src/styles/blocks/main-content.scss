@@ -1,0 +1,41 @@
+.main-content {
+  padding-inline: 1rem;
+  padding-bottom: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include on-tablet {
+    padding-inline: 1.5rem;
+  }
+
+  @include on-small-desktop {
+    padding-inline: 70px;
+  }
+
+  @include on-desktop {
+    padding-inline: 70px;
+    padding-block: 40px;
+    padding-right: 95px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-block: 1rem;
+    text-align: center;
+
+    @include on-tablet {
+      margin-block: 3rem;
+    }
+
+    @include on-desktop {
+      text-align: left;
+      margin-bottom: 50px;
+
+      font-size: 24px;
+      color: $text-color_title;
+      line-height: 36px;
+    }
+  }
+}

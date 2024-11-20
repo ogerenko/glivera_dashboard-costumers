@@ -1,0 +1,35 @@
+.body {
+  margin: 0;
+  min-width: 370px;
+  position: relative;
+
+  display: flex;
+
+  background-color: $bg-color_body;
+
+  @include on-desktop {
+    padding-left: 300px;
+  }
+
+  &__module {
+    position: absolute;
+    z-index: 5;
+
+    transition-duration: $effect-duration;
+    transition-timing-function: ease;
+
+    &--active {
+      inset: 0;
+      height: 100vh;
+      background-color: #5352527b;
+    }
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

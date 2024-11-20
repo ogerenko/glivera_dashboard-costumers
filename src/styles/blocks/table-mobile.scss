@@ -1,0 +1,63 @@
+.table-mobile {
+  margin-block: 30px;
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+
+  @include on-tablet {
+    display: none;
+  }
+
+  &__customer-card {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid $border-color;
+
+    &--first::before {
+      content: "";
+      position: absolute;
+      top: 10;
+      left: -50%;
+      right: -50%;
+      height: 1px;
+      background-color: $border-color;
+      z-index: 1;
+    }
+  }
+
+  &__head {
+    color: $text-color_thirdly;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    letter-spacing: -0.01em;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1.5rem;
+  }
+
+  &__row:not(.table__row--header) {
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+  }
+
+  &__header {
+    text-align: right;
+    padding-block: 0.5rem;
+  }
+
+  &__cell {
+    padding-block: 0.5rem;
+
+    &--status {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.section {
+  padding: 1.5rem;
+  background-color: $bg-color_white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+
+  @include on-desktop {
+    padding: 40px;
+    padding-top: 30px;
+    border-radius: 30px;
+  }
+}

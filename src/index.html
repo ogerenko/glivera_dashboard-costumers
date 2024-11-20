@@ -1,13 +1,453 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="page">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Customers</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="favicon" href="./images/icons/logo_icon.svg" />
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__body body">
+    <div class="body__module"></div>
+
+    <aside class="body__dashboard dashboard">
+      <div class="dashboard__button-hide-show">
+        <div class="dashboard__button-hide-show-bg"></div>
+      </div>
+
+      <header class="dashboard__header">
+        <h1 class="dashboard__title">Dashboard</h1>
+
+        <nav class="dashboard__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--dashboard">
+                <div class="navigation__icon navigation__icon--dashboard"></div>
+                <div class="navigation__label">Dashboard</div>
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <div class="navigation__icon navigation__icon--product"></div>
+                <div class="navigation__label">Product</div>
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--active">
+                <div class="navigation__icon navigation__icon--customers"></div>
+                <div class="navigation__label">Customers</div>
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <div class="navigation__icon navigation__icon--income"></div>
+                <div class="navigation__label">Income</div>
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <div class="navigation__icon navigation__icon--promote"></div>
+                <div class="navigation__label">Promote</div>
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <div class="navigation__icon navigation__icon--help"></div>
+                <div class="navigation__label">Help</div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <footer class="dashboard__footer">
+        <div class="profile">
+          <img
+            class="profile__avatar"
+            src="./images/profile-photo--evano.png"
+            alt="PHOTO-EVANO"
+          />
+
+          <div class="profile__info">
+            <div class="profile__name">Evano</div>
+            <div class="profile__role">Project Manager</div>
+          </div>
+        </div>
+      </footer>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-content__header">
+        <h1 class="main-content__title">Hello Evano 👋</h1>
+      </header>
+
+      <section class="main-content__section section">
+        <header class="section__header-section header-section">
+          <div class="header-section__title-container">
+            <h2 class="header-section__title">All Customers</h2>
+            <div class="header-section__subtitle">Active Members</div>
+          </div>
+
+          <div class="header-section__search">
+            <div class="header-section__search-icon"></div>
+            <input
+              class="header-section__search-input"
+              type="text"
+              placeholder="Search"
+              aria-label="Search customers"
+            />
+          </div>
+        </header>
+        <!-- MOBILE -->
+        <div class="section__table-mobile table-mobile">
+          <table
+            class="table-mobile__customer-card table-mobile__customer-card--first"
+          >
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Jane Cooper</td>
+                <td class="table-mobile__cell">Microsoft</td>
+                <td class="table-mobile__cell">(225) 555-0118</td>
+                <td class="table-mobile__cell">jane@microsoft.com</td>
+                <td class="table-mobile__cell">United States</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--active">Active</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Floyd Miles</td>
+                <td class="table-mobile__cell">Yahoo</td>
+                <td class="table-mobile__cell">(205) 555-0100</td>
+                <td class="table-mobile__cell">floyd@yahoo.com</td>
+                <td class="table-mobile__cell">Kiribati</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--inactive">Inactive</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Ronald Richards</td>
+                <td class="table-mobile__cell">Adobe</td>
+                <td class="table-mobile__cell">(302) 555-0107</td>
+                <td class="table-mobile__cell">ronald@adobe.com</td>
+                <td class="table-mobile__cell">Israel</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--inactive">Inactive</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Marvin McKinney</td>
+                <td class="table-mobile__cell">Tesla</td>
+                <td class="table-mobile__cell">(252) 555-0126</td>
+                <td class="table-mobile__cell">marvin@tesla.com</td>
+                <td class="table-mobile__cell">Iran</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--active">Active</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Jerome Bell</td>
+                <td class="table-mobile__cell">Google</td>
+                <td class="table-mobile__cell">(629) 555-0129</td>
+                <td class="table-mobile__cell">jerome@google.com</td>
+                <td class="table-mobile__cell">Réunion</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--active">Active</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Kathryn Murphy</td>
+                <td class="table-mobile__cell">Microsoft</td>
+                <td class="table-mobile__cell">(406) 555-0120</td>
+                <td class="table-mobile__cell">kathryn@microsoft.com</td>
+                <td class="table-mobile__cell">Curaçao</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--active">Active</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Jacob Jones</td>
+                <td class="table-mobile__cell">Yahoo</td>
+                <td class="table-mobile__cell">(208) 555-0112</td>
+                <td class="table-mobile__cell">jacob@yahoo.com</td>
+                <td class="table-mobile__cell">Brazil</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--active">Active</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-mobile__customer-card">
+            <thead class="table-mobile__head">
+              <tr class="table-mobile__row table__row--header">
+                <th class="table-mobile__header">Customer Name</th>
+                <th class="table-mobile__header">Company</th>
+                <th class="table-mobile__header">Phone Number</th>
+                <th class="table-mobile__header">Email</th>
+                <th class="table-mobile__header">Country</th>
+                <th class="table-mobile__header">Status</th>
+              </tr>
+            </thead>
+
+            <tbody class="table-mobile__body">
+              <tr class="table-mobile__row">
+                <td class="table-mobile__cell">Kristin Watson</td>
+                <td class="table-mobile__cell">Facebook</td>
+                <td class="table-mobile__cell">(704) 555-0127</td>
+                <td class="table-mobile__cell">kristin@facebook.com</td>
+                <td class="table-mobile__cell">Åland Islands</td>
+                <td class="table-mobile__cell table-mobile__cell--status">
+                  <div class="status status--inactive">Inctive</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- DESKTOP -->
+        <table class="section__table table">
+          <thead class="table__head">
+            <tr class="table__row table__row--header">
+              <th class="table__header">Customer Name</th>
+              <th class="table__header">Company</th>
+              <th class="table__header">Phone Number</th>
+              <th class="table__header">Email</th>
+              <th class="table__header">Country</th>
+              <th class="table__header">Status</th>
+            </tr>
+          </thead>
+
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell">Jane Cooper</td>
+              <td class="table__cell">Microsoft</td>
+              <td class="table__cell">(225) 555-0118</td>
+              <td class="table__cell">jane@microsoft.com</td>
+              <td class="table__cell">United States</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--active">Active</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Floyd Miles</td>
+              <td class="table__cell">Yahoo</td>
+              <td class="table__cell">(205) 555-0100</td>
+              <td class="table__cell">floyd@yahoo.com</td>
+              <td class="table__cell">Kiribati</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--inactive">Inactive</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Ronald Richards</td>
+              <td class="table__cell">Adobe</td>
+              <td class="table__cell">(302) 555-0107</td>
+              <td class="table__cell">ronald@adobe.com</td>
+              <td class="table__cell">Israel</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--inactive">Inactive</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Marvin McKinney</td>
+              <td class="table__cell">Tesla</td>
+              <td class="table__cell">(252) 555-0126</td>
+              <td class="table__cell">marvin@tesla.com</td>
+              <td class="table__cell">Iran</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--active">Active</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Jerome Bell</td>
+              <td class="table__cell">Google</td>
+              <td class="table__cell">(629) 555-0129</td>
+              <td class="table__cell">jerome@google.com</td>
+              <td class="table__cell">Réunion</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--active">Active</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Kathryn Murphy</td>
+              <td class="table__cell">Microsoft</td>
+              <td class="table__cell">(406) 555-0120</td>
+              <td class="table__cell">kathryn@microsoft.com</td>
+              <td class="table__cell">Curaçao</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--active">Active</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Jacob Jones</td>
+              <td class="table__cell">Yahoo</td>
+              <td class="table__cell">(208) 555-0112</td>
+              <td class="table__cell">jacob@yahoo.com</td>
+              <td class="table__cell">Brazil</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--active">Active</div>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <td class="table__cell">Kristin Watson</td>
+              <td class="table__cell">Facebook</td>
+              <td class="table__cell">(704) 555-0127</td>
+              <td class="table__cell">kristin@facebook.com</td>
+              <td class="table__cell">Åland Islands</td>
+              <td class="table__cell table__cell--status">
+                <div class="status status--inactive">Inctive</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <footer class="section__footer-section footer-section">
+          <div class="footer-section__info">
+            Showing data 1 to 8 of 256K entries
+          </div>
+
+          <nav class="footer-section__pagination pagination">
+            <button class="pagination__button">&lt;</button>
+            <button class="pagination__button pagination__button--active">
+              1
+            </button>
+            <button class="pagination__button">2</button>
+            <button class="pagination__button">3</button>
+            <button class="pagination__button">4</button>
+            <button class="pagination__button pagination__button--split">
+              ...
+            </button>
+            <button class="pagination__button">40</button>
+            <button class="pagination__button">&gt;</button>
+          </nav>
+        </footer>
+      </section>
+    </main>
   </body>
 </html>
